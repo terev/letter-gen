@@ -92,7 +92,8 @@ rp({
         return rows.eq(i).find('td').eq(1).text().trim();
     }
 
-    return Promise.reduce(postingIds, (shortlist, postingId) => {
+    let shortlist = [];
+    return Promise.map(postingIds, (postingId) => {
         return rp({
             method: 'POST',
             uri: `${baseUrl}${postingsPage}`,
@@ -134,11 +135,10 @@ rp({
             shortlist.push(postingData);
 
             console.log(`Done fetching data from ${postingData.organization.name}:${postingData.job_title} posting...`);
-
-            return shortlist;
         });
-    }, []);
-
+    }).then(() => {
+        return shortlist;
+    });
 }).then((shortlist) => {
     return fs.writeFileAsync(config.out_file, JSON.stringify({shortlist: shortlist}));
 }).then(() => {
