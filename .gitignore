@@ -37,3 +37,7 @@ jspm_packages
 .node_repl_history
 
 .idea
+
+shortlist.json
+config.json
+letters
