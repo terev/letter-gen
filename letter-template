@@ -1,0 +1,15 @@
+{{config.address}}
+{{config.city}}, {{config.province}} {{config.postal_code}}
+
+{{config.email}}
+{{config.phone_number}}
+
+{{today}}
+
+{{posting.organization.name}}
+{{posting.organization.address}}
+{{posting.organization.city}}, {{posting.organization.province}} {{posting.organization.postal_code}}
+
+Dear {{posting.organization.contact.salutation}} {{posting.organization.contact.first_name}} {{posting.organization.contact.last_name}},
+
+{{config.name}}
