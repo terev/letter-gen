@@ -8,8 +8,7 @@ Install required packages with the command `npm install`
 ### Yarn
 Install required packages with the command `yarn`
 
-## Configuration
-config.json
+## Configuration - config.json
 1. Set your Recruit Guelph credentials in the 'username' and 'password' fields
 2. Configure the other fields accordingly
 
@@ -18,7 +17,7 @@ Running `node get-shortlist.js` will scrape your shortlist from recruit guelph a
 shortlist.json.
 
 ## Generating Letters
-The only supported output type is pdf currently.
+Currently the only supported output type is pdf.
 
 The default letter template is called `letter-template`.
 ### PDF
